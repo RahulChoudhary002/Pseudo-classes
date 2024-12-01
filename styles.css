@@ -1,0 +1,92 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+header h1::first-letter {
+    font-size: 3rem;
+    color: #ffcb57;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Attribute Selector */
+.card[data-info="attribute-selector"] {
+    border: 2px dashed #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Child Selector */
+#selector-demo>.card {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+}
+
+#selector-demo>.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sibling Selector */
+.special+.sibling {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffcb57;
+    padding: 15px;
+}
+
+/* :nth-child and :not(selector) */
+.card:nth-child(odd):not(.special) {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card:nth-child(even):not(.sibling) {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* ::before and ::after */
+.card h2 {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.card h2::before {
+    content: '🌟';
+    position: absolute;
+    left: -30px;
+}
+
+.card h2::after {
+    content: '✨';
+    position: absolute;
+    right: -30px;
+}
+
+/* First Letter */
+.text-example p::first-letter {
+    font-size: 2.5rem;
+    color: #00f2fe;
+    font-weight: bold;
+}
+
+/* Footer */

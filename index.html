@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Explore Advanced CSS Selectors</h1>
+        <p>Learn about attribute selectors, pseudo-classes, and pseudo-elements!</p>
+    </header>
+    <main>
+        <section id="selector-demo">
+            <div class="card" data-info="attribute-selector">
+                <h2>Attribute Selector</h2>
+                <p>Styles based on attributes like `[data-info="attribute-selector"]`.</p>
+            </div>
+            <div class="card special" data-info="child-selector">
+                <h2>Child Selector</h2>
+                <p>Targets direct children like `#selector-demo > .card`.</p>
+            </div>
+            <div class="card sibling" data-info="sibling-selector">
+                <h2>Sibling Selector</h2>
+                <p>Styles siblings like `.special + .sibling`.</p>
+            </div>
+        </section>
+        <section>
+            <div class="text-example">
+                <p>Notice how the <strong>first letter</strong> of this text is styled.</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
